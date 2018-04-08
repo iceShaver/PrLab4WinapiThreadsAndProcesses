@@ -56,8 +56,7 @@ void measureThreadsTime() {
 
 
 int main(int argc, char* argv[]) {
-	// !!! FORKBOMB !!!
-	//Process{ argv[0], argv[0], IDLE_PRIORITY_CLASS }.run(); return 0;
+	//Process{ argv[0], argv[0], REALTIME_PRIORITY_CLASS }.run();
 	auto notepadExe = R"(C:\windows\system32\notepad.exe)"s;
 	auto notepadProcess = Process{ notepadExe, notepadExe };
 	notepadProcess.run();
