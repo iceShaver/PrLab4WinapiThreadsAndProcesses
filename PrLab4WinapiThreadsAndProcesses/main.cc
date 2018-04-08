@@ -27,7 +27,7 @@ void measureProcessesTime() {
 	auto iters = 2'000'000'000ul;
 	cout << "Testing processes" << endl;
 	auto procs = vector<Process>{};
-	auto testProgram = R"(D:\main.exe)"s;
+	auto testProgram = R"(D:\app.exe)"s;
 	procs.emplace_back(testProgram, testProgram + " " + to_string(iters) + " " + to_string(1), REALTIME_PRIORITY_CLASS);
 	procs.emplace_back(testProgram, testProgram + " " + to_string(iters) + " " + to_string(2), HIGH_PRIORITY_CLASS);
 	procs.emplace_back(testProgram, testProgram + " " + to_string(iters) + " " + to_string(3), NORMAL_PRIORITY_CLASS);
